@@ -96,7 +96,7 @@ public class ButtonFollow5 : MonoBehaviour
         if (selectEnter.interactorObject is XRPokeInteractor)
         {
             buttonPressed5 = true;
-            story.ResetList(0);
+            story.ResetList();
         }
     }
 

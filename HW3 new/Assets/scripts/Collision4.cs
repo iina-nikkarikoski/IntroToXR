@@ -9,7 +9,7 @@ public class Collision4 : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {      
-        if(collision.gameObject.tag == "bullet" ) {
+        if(collision.gameObject.tag == "bullet" || collision.gameObject.tag == "hands") {
             target4 = true;
         }
     }

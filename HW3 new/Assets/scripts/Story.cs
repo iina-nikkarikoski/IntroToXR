@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 
 public class Story : MonoBehaviour
@@ -30,13 +29,14 @@ public class Story : MonoBehaviour
         collision3 = GameObject.Find("Target 3").GetComponent<Collision3>();
         collision4 = GameObject.Find("Target 4").GetComponent<Collision4>();
         collision5 = GameObject.Find("Target 5").GetComponent<Collision5>();
+        ResetList();
    }
 
    void Update()
    {
         FinishedTask1();
         FinishedTask2();
-        Treasure()
+        Treasure();        
 ;   }
 
     void FinishedTask1()
@@ -53,6 +53,7 @@ public class Story : MonoBehaviour
         else
         {
             plane1.SetActive(false);
+            task1 = false;
         }
     }
 
@@ -69,14 +70,12 @@ public class Story : MonoBehaviour
         buttonList.Add(index);
         PrintList();
         count++;
-        OnButtonPressed?.Invoke(index);
     }
 
-    public void ResetList(int index)
+    public void ResetList()
     {
         buttonList.Clear();
         PrintList();
-        OnButtonPressed?.Invoke(index);
     }
 
     void FinishedTask2()
@@ -93,6 +92,7 @@ public class Story : MonoBehaviour
         else
         {
             plane2.SetActive(false);
+            task2 = false;
         }   
     }
 

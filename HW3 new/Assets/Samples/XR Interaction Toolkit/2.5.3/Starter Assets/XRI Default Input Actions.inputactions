@@ -852,8 +852,8 @@
                 },
                 {
                     "name": "",
-                    "id": "b34c79c1-ab5e-4851-87ac-abc43705eae0",
-                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "id": "e62de36e-eeec-405a-933e-5e3914eb56d6",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
